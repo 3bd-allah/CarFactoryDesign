@@ -9,8 +9,9 @@ namespace CarFactoryDesign
     {
         static void Main(string[] args)
         {
+            // create car based on the type of enigne
             var car = CarFactory.CreateCar(EngineFactory.CreateEngine<HybridEngine>());
-            Console.WriteLine(car); // hybrid
+            Console.WriteLine(car); // hybrid [electric or gas based on the current speed]
 
             car.Start();
             car.Accelerate();
@@ -27,6 +28,7 @@ namespace CarFactoryDesign
             car.Brake();
             car.Stop();
 
+            // replcaed the engine of an existing car
             CarFactory.ReplaceCarEngine(car, EngineFactory.CreateEngine<ElectricEngine>());
             car.Stop();
             car.Start();

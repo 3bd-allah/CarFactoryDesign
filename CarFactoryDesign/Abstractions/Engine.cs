@@ -3,6 +3,7 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace CarFactoryDesign.Abstractions
 {
+    // base calss of all engine types
     public abstract class Engine
     {
         private int? _speed;
